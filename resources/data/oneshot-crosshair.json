@@ -4,5 +4,5 @@
   "link": "resources/data/code-snippets/oneshot-crosshair.lua",
   "source": "",
   "description": "Oneshot crosshair toggle for your waywall config. If you're using the [generic config](https://github.com/arjuncgore/waywall_generic_config) by Gore, add it to your ~/.config/waywall/extras.lua file. Download the crosshair.png [here](https://raw.githubusercontent.com/emnerson/downloads/main/oneshot%20crosshair.png).",
-  "category": "waywall-snippets"
+  "category": "waywall-config-snippets"
 }

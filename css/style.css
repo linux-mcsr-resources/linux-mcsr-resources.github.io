@@ -53,6 +53,13 @@ h1 {
   color: #e0e0e0;
   padding-bottom: 12px;
   border-bottom: 1px solid #808080;
+  position: relative;
+  padding-left: 0.80em;
+  margin-left: -0.80em;
+}
+
+.category-heading:hover .hash-link {
+  opacity: 1;
 }
 
 .category-heading + .resource {

@@ -30,7 +30,7 @@ You can add hyperlinks in the description by using `[text](link)`, same as in ma
     - `docs`
     - `programs`
     - `waywall-configs`
-    - `waywall-snippets` (waywall config code snippets)
+    - `waywall-config-snippets`
     - `waywall-tools`
     - `websites`
     - `wm`

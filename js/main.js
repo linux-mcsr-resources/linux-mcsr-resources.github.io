@@ -50,7 +50,8 @@ Promise.all([
       });
       const heading = document.createElement('h2');
       heading.className = 'category-heading';
-      heading.textContent = category.label;
+      heading.id = category.id;
+      heading.innerHTML = `<a href="#${category.id}" class="hash-link">#</a><span class="category-heading-text">${category.label}</span>`;
       list.appendChild(heading);
 
       groupedResources.forEach(resource => {
@@ -59,7 +60,7 @@ Promise.all([
         item.className = 'resource';
         item.id = urlId;
 
-        const isSnippet = resource.category === 'waywall-snippets';
+        const isSnippet = resource.category === 'waywall-config-snippets';
 
         const viewButton = isSnippet
           ? `<a href="#" class="view-snippet-btn" data-link="${resource.link}">View</a>`
