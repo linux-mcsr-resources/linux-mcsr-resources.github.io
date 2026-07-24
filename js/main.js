@@ -9,6 +9,7 @@ fetch('resources/index.json', { cache: 'no-store' })
   })
   .then(resources => {
     const list = document.getElementById('resource-list');
+    list.innerHTML = '';
 
     resources.forEach(resource => {
       const urlId = resource.name.trim().toLowerCase().replace(/\s+/g, '-');
