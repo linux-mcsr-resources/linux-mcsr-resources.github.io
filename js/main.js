@@ -25,12 +25,20 @@ Promise.all([
 
       if (categoryResources.length === 0) return;
 
+      const seenAuthors = [];
+      categoryResources.forEach(resource => {
+        if (!seenAuthors.includes(resource.author)) seenAuthors.push(resource.author);
+      });
+      const groupedResources = [];
+      seenAuthors.forEach(author => {
+        groupedResources.push(...categoryResources.filter(resource => resource.author === author));
+      });
       const heading = document.createElement('h2');
       heading.className = 'category-heading';
       heading.textContent = category.label;
       list.appendChild(heading);
 
-      categoryResources.forEach(resource => {
+      groupedResources.forEach(resource => {
         const urlId = resource.name.trim().toLowerCase().replace(/\s+/g, '-');
         const item = document.createElement('div');
         item.className = 'resource';
