@@ -4,6 +4,10 @@
     "label": "Documentation"
   },
   {
+    "id": "discord",
+    "label": "Discord server"
+  },
+  {
     "id": "programs",
     "label": "Programs"
   },

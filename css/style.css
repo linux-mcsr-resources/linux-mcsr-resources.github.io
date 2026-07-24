@@ -156,14 +156,11 @@ h1 {
 .snippet-code {
   border: 1px solid #808080;
   overflow-x: auto;
-  overflow-y: auto;
-  max-height: 550px;
   margin: 0 !important;
   text-align: left;
 }
 
 .snippet-code code {
   white-space: pre;
-  font-size: 0.9em;
 }
 

@@ -1,8 +1,10 @@
 [
   "linux-mcsr-guide.json",
+  "discord-server.json",
   "waywall.json",
   "resetti.json",
   "tuxinjector.json",
+  "mcsr-nixos.json",
   "nbtrackr.json",
   "twitch-chat-overlay.json",
   "xeyesee.json",
