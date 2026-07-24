@@ -1,7 +1,15 @@
-fetch('resources/index.json', { cache: 'no-store' })
-  .then(response => response.json())
-  .then(filenames => {
-    const fetchPromises = filenames.map(filename =>
+Promise.all([
+  fetch('resources/index.json', { cache: 'no-store' }).then(response => response.json()),
+  fetch('resources/order.json', { cache: 'no-store' }).then(response => response.json())
+])
+  .then(([allFilenames, orderedFilenames]) => {
+    const remaining = allFilenames
+      .filter(filename => !orderedFilenames.includes(filename))
+      .sort();
+
+    const finalOrder = [...orderedFilenames, ...remaining];
+
+    const fetchPromises = finalOrder.map(filename =>
       fetch(`resources/${filename}`, { cache: 'no-store' }).then(response => response.json())
     );
 
