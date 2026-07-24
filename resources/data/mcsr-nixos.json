@@ -1,0 +1,8 @@
+{
+  "name": "MCSR NixOS",
+  "author": "uku",
+  "link": "https://git.uku3lig.net/uku/mcsr-nixos",
+  "source": "https://git.uku3lig.net/uku/mcsr-nixos",
+  "description": "Collection of packages and NixOS modules to facilitate setting up Minecraft speedrunning on NixOS.",
+  "category": "programs"
+}
