@@ -1,5 +1,15 @@
 [
+  "linux-mcsr-guide.json",
   "waywall.json",
   "resetti.json",
-  "linux-mcsr-guide.json"
+  "tuxinjector.json",
+  "nbtrackr.json",
+  "twitch-chat-overlay.json",
+  "xeyesee.json",
+  "waywall-generic-config.json",
+  "plug.waywall.json",
+  "waywall-paceman-overlay.json",
+  "xkbedit.json",
+  "jay.json",
+  "smooth-resize-animations.json"
 ]

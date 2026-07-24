@@ -26,10 +26,15 @@ It is fine if the resource isn't made by you.
 ```
 
 4. `category` must be one of these below:
+    - `docs`
     - `programs`
-    - `websites`
     - `waywall-configs`
     - `waywall-tools`
+    - `websites`
+    - `wm`
+    - `obs`
+    - `tutorials`
+    - `distros`
 
    If none of the above categories fit your resource, you're welcome to suggest a new category in your pull request (just don't edit the `categories.json` file).
 

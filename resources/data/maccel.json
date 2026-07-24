@@ -1,0 +1,8 @@
+{
+  "name": "maccel",
+  "author": "Gnarus-G",
+  "link": "https://www.maccel.org/",
+  "source": "https://github.com/Gnarus-G/maccel",
+  "description": "Mouse acceleration driver and kernel module for Linux. The Sens Multiplier field can be used to adjust mouse sensitivity, similar to changing your DPI (e.g. Sens Multiplier 1 behaves like DPI 1000), without needing mouse software.",
+  "category": "programs"
+}

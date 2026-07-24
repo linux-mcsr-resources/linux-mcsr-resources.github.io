@@ -1,0 +1,8 @@
+{
+  "name": "tuxinjector",
+  "author": "bunny",
+  "link": "https://github.com/flammablebunny/tuxinjector",
+  "source": "https://github.com/flammablebunny/tuxinjector",
+  "description": "[NOT legal to use in speedrun.com submissions or MCSR Ranked yet] Tux Injector is an overlay written in Rust that injects into Minecraft's rendering pipeline on Linux and macOS, similar to Toolscreen on Windows. The overlay can render resizable game-view mirrors, image overlays, captured app/windows, and - on Linux x86_64/aarch64 - live browser overlays.",
+  "category": "programs"
+}

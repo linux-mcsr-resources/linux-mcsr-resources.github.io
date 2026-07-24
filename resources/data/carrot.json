@@ -1,0 +1,8 @@
+{
+  "name": "carrot",
+  "author": "bunny",
+  "link": "https://carrotwm.org/",
+  "source": "https://github.com/carrot-wm/carrot",
+  "description": "A pure Rust tiling Wayland compositor with zero linked C, all the way down to the kernel. Carrot aims to be a feature-complete, all-in-one compositor with native support for blur, animations, multi-GPU, tearing, and more - no scripting or external tools needed.",
+  "category": "wm"
+}

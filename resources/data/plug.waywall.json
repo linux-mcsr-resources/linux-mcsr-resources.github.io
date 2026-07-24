@@ -1,0 +1,8 @@
+{
+  "name": "plug.waywall",
+  "author": "Saanvi",
+  "link": "https://github.com/its-saanvi/plug.waywall",
+  "source": "https://github.com/its-saanvi/plug.waywall",
+  "description": "A simple plugin manager for waywall.",
+  "category": "waywall-tools"
+}

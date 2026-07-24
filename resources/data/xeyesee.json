@@ -1,0 +1,8 @@
+{
+  "name": "xEyeSee",
+  "author": "qMaxXen",
+  "link": "https://github.com/qMaxXen/xEyeSee",
+  "source": "https://github.com/qMaxXen/xEyeSee",
+  "description": "A lightweight Python script that displays an eye measuring projector when you eye zoom for X11.",
+  "category": "programs"
+}

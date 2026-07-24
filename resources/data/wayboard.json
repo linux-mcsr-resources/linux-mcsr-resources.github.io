@@ -1,0 +1,8 @@
+{
+  "name": "wayboard",
+  "author": "woofdoggo",
+  "link": "https://github.com/tesselslate/wayboard",
+  "source": "https://github.com/tesselslate/wayboard",
+  "description": "wayboard is a libinput-based keyboard input display for Wayland.",
+  "category": "programs"
+}

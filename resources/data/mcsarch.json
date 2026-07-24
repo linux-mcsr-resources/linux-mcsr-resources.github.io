@@ -1,0 +1,8 @@
+{
+  "name": "MCSaRch",
+  "author": "vojta",
+  "link": "https://github.com/votisek/mcsarch",
+  "source": "https://github.com/votisek/mcsarch",
+  "description": "MCSaRch is a custom Arch Linux ISO focused on Minecraft speedrunning. It provides a fast, preconfigured setup with the core tools already included.",
+  "category": "distros"
+}

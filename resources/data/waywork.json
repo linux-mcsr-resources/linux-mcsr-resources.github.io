@@ -1,0 +1,8 @@
+{
+  "name": "Waywork",
+  "author": "Esensats",
+  "link": "https://github.com/Esensats/waywork",
+  "source": "https://github.com/Esensats/waywork",
+  "description": "A framework for building waywall configurations for Minecraft speedrunning setups.",
+  "category": "waywall-tools"
+}

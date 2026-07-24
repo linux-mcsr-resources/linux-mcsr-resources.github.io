@@ -1,0 +1,8 @@
+{
+  "name": "waywall Music Overlay",
+  "author": "Gore",
+  "link": "https://github.com/arjuncgore/ww_music_overlay",
+  "source": "https://github.com/arjuncgore/ww_music_overlay",
+  "description": "Music controls on waywall and an optional overlay (requires playerctl)",
+  "category": "waywall-tools"
+}

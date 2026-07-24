@@ -1,0 +1,8 @@
+{
+  "name": "OBS game capture",
+  "author": "nowrep",
+  "link": "https://github.com/nowrep/obs-vkcapture",
+  "source": "https://github.com/nowrep/obs-vkcapture",
+  "description": "OBS plugin for Vulkan/OpenGL game capture on Linux.",
+  "category": "obs"
+}

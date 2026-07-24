@@ -1,6 +1,38 @@
 [
-  { "id": "programs", "label": "Programs" },
-  { "id": "websites", "label": "Websites" },
-  { "id": "waywall-configs", "label": "Waywall Configs" },
-  { "id": "waywall-tools", "label": "Waywall Tools" }
+  {
+    "id": "docs",
+    "label": "Documentation"
+  },
+  {
+    "id": "programs",
+    "label": "Programs"
+  },
+  {
+    "id": "waywall-configs",
+    "label": "Waywall Configs"
+  },
+  {
+    "id": "waywall-tools",
+    "label": "Waywall Tools"
+  },
+  {
+    "id": "websites",
+    "label": "Websites"
+  },
+  {
+    "id": "wm",
+    "label": "Window Managers"
+  },
+  {
+    "id": "obs",
+    "label": "For OBS Studio"
+  },
+  {
+    "id": "tutorials",
+    "label": "Tutorials"
+  },
+  {
+    "id": "distros",
+    "label": "Distributions"
+  }
 ]

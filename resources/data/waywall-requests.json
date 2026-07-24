@@ -1,0 +1,8 @@
+{
+  "name": "waywall Requests",
+  "author": "Gore",
+  "link": "https://github.com/arjuncgore/ww_requests",
+  "source": "https://github.com/arjuncgore/ww_requests",
+  "description": "Requests library for waywall (lua).",
+  "category": "waywall-tools"
+}
