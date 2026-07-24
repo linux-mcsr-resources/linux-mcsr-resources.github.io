@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px 20px 40px;
+  background-color: #3c3f41;
+  color: #e0e0e0;
+  font-family: 'Inter';
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-family: 'Mojangles';
+  font-size: 2.5em;
+}
+
+#subtitle {
+  color: #d6d6d6;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+#resource-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resource {
+  width: 100%;
+  border: 1px solid #808080;
+  padding: 20px 24px;
+  margin-top: -1px; /* overlap border */
+  text-align: left;
+}
+
+.resource-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.resource-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  padding-left: 0.80em;
+  margin-left: -0.80em;
+}
+
+.hash-link {
+  position: absolute;
+  left: 0;
+  color: #6e9bc7;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.resource-name:hover .hash-link {
+  opacity: 1;
+}
+
+.hash-link:active {
+  color: #446e9e;
+}
+
+.resource-author {
+  font-size: 1em;
+}
+
+.resource-description {
+  font-size: 1em;
+  margin-top: 3px;
+}
+
+.resource-buttons {
+  margin-top: 8px;
+}
+
+.resource-buttons a {
+  display: inline-block;
+  background-color: #4e5052;
+  color: #e0e0e0;
+  border: 1px solid #808080;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 3px 15px;
+  margin-right: 3px;
+  font-size: 0.85em;
+}
+
+.resource-buttons a:hover {
+  border-color: #446e9e;
+}

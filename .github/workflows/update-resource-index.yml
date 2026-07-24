@@ -1,0 +1,23 @@
+name: Update resource index
+on:
+  push:
+    paths:
+      - 'resources/*.json'
+      - '!resources/index.json'
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate index.json
+        run: |
+          cd resources
+          ls *.json | grep -v index.json | jq -R -s -c 'split("\n")[:-1]' > index.json
+      - name: Commit updated index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add resources/index.json
+          git diff --staged --quiet || git commit -m "Auto-update resource index"
+          git push
