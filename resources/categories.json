@@ -1,0 +1,6 @@
+[
+  { "id": "programs", "label": "Programs" },
+  { "id": "websites", "label": "Websites" },
+  { "id": "waywall-configs", "label": "Waywall Configs" },
+  { "id": "waywall-tools", "label": "Waywall Tools" }
+]

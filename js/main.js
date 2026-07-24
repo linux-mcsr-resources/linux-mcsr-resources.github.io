@@ -1,8 +1,9 @@
 Promise.all([
   fetch('resources/index.json', { cache: 'no-store' }).then(response => response.json()),
-  fetch('resources/order.json', { cache: 'no-store' }).then(response => response.json())
+  fetch('resources/order.json', { cache: 'no-store' }).then(response => response.json()),
+  fetch('resources/categories.json', { cache: 'no-store' }).then(response => response.json())
 ])
-  .then(([allFilenames, orderedFilenames]) => {
+  .then(([allFilenames, orderedFilenames, categories]) => {
     const remaining = allFilenames
       .filter(filename => !orderedFilenames.includes(filename))
       .sort();
@@ -13,30 +14,41 @@ Promise.all([
       fetch(`resources/data/${filename}`, { cache: 'no-store' }).then(response => response.json())
     );
 
-    return Promise.all(fetchPromises);
+    return Promise.all(fetchPromises).then(resources => ({ resources, categories }));
   })
-  .then(resources => {
+  .then(({ resources, categories }) => {
     const list = document.getElementById('resource-list');
     list.innerHTML = '';
 
-    resources.forEach(resource => {
-      const urlId = resource.name.trim().toLowerCase().replace(/\s+/g, '-');
-      const item = document.createElement('div');
-      item.className = 'resource';
-      item.id = urlId;
+    categories.forEach(category => {
+      const categoryResources = resources.filter(resource => resource.category === category.id);
 
-      item.innerHTML = `
-        <div class="resource-title-row">
-            <div class="resource-name"><a href="#${urlId}" class="hash-link">#</a><span class="resource-name-text">${resource.name}</span></div>
-            <div class="resource-author">by ${resource.author}</div>
-        </div>
-        <div class="resource-description">${resource.description}</div>
-        <div class="resource-buttons">
-            <a href="${resource.link}" target="_blank" rel="noopener">View</a>
-            ${resource.source ? `<a href="${resource.source}" target="_blank" rel="noopener">Source</a>` : ''}
-        </div>
-      `;
+      if (categoryResources.length === 0) return;
 
-      list.appendChild(item);
+      const heading = document.createElement('h2');
+      heading.className = 'category-heading';
+      heading.textContent = category.label;
+      list.appendChild(heading);
+
+      categoryResources.forEach(resource => {
+        const urlId = resource.name.trim().toLowerCase().replace(/\s+/g, '-');
+        const item = document.createElement('div');
+        item.className = 'resource';
+        item.id = urlId;
+
+        item.innerHTML = `
+          <div class="resource-title-row">
+              <div class="resource-name"><a href="#${urlId}" class="hash-link">#</a><span class="resource-name-text">${resource.name}</span></div>
+              <div class="resource-author">by ${resource.author}</div>
+          </div>
+          <div class="resource-description">${resource.description}</div>
+          <div class="resource-buttons">
+              <a href="${resource.link}" target="_blank" rel="noopener">View</a>
+              ${resource.source ? `<a href="${resource.source}" target="_blank" rel="noopener">Source</a>` : ''}
+          </div>
+        `;
+
+        list.appendChild(item);
+      });
     });
   });

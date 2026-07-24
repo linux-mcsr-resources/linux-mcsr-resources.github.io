@@ -3,5 +3,6 @@
   "author": "woofdoggo",
   "link": "https://github.com/tesselslate/resetti",
   "source": "https://github.com/tesselslate/resetti",
-  "description": "resetti is an X11 app mainly used for resizing the Minecraft window."
+  "description": "resetti is an X11 app mainly used for resizing the Minecraft window.",
+  "category": "programs"
 }

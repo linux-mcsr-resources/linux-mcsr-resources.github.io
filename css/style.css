@@ -23,6 +23,20 @@ h1 {
   margin-bottom: 40px;
 }
 
+.category-heading {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto 8px;
+  text-align: left;
+  font-family: 'Mojangles';
+  font-size: 1.4em;
+  color: #e0e0e0;
+}
+
+.category-heading:first-of-type {
+  margin-top: 0;
+}
+
 #resource-list {
   display: flex;
   flex-direction: column;
