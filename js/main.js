@@ -10,7 +10,7 @@ Promise.all([
     const finalOrder = [...orderedFilenames, ...remaining];
 
     const fetchPromises = finalOrder.map(filename =>
-      fetch(`resources/${filename}`, { cache: 'no-store' }).then(response => response.json())
+      fetch(`resources/data/${filename}`, { cache: 'no-store' }).then(response => response.json())
     );
 
     return Promise.all(fetchPromises);

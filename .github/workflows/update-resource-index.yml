@@ -2,8 +2,7 @@ name: Update resource index
 on:
   push:
     paths:
-      - 'resources/*.json'
-      - '!resources/index.json'
+      - 'resources/data/*.json'
 
 permissions:
   contents: write
@@ -15,8 +14,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Generate index.json
         run: |
-          cd resources
-          ls *.json | grep -v index.json | jq -R -s -c 'split("\n")[:-1]' > index.json
+          cd resources/data
+          ls *.json | jq -R -s -c 'split("\n")[:-1]' > ../index.json
       - name: Commit updated index
         run: |
           git config user.name "github-actions[bot]"
