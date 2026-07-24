@@ -20,17 +20,43 @@ h1 {
 #subtitle {
   color: #d6d6d6;
   margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.links {
+  color: #d6d6d6;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+.links:last-of-type {
   margin-bottom: 40px;
+}
+
+.links a {
+  color: #7ec8ff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }
 
 .category-heading {
   width: 100%;
   max-width: 900px;
-  margin: 40px auto 8px;
+  margin: 40px auto 0;
   text-align: left;
   font-family: 'Mojangles';
   font-size: 1.4em;
   color: #e0e0e0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #808080;
+}
+
+.category-heading + .resource {
+  margin-top: 20px;
 }
 
 .category-heading:first-of-type {
