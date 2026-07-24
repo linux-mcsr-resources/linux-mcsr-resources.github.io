@@ -20,6 +20,21 @@ Promise.all([
     const list = document.getElementById('resource-list');
     list.innerHTML = '';
 
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderDescription(text) {
+      const escaped = escapeHtml(text);
+      return escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (match, label, url) => {
+        return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
+      });
+    }
+
     categories.forEach(category => {
       const categoryResources = resources.filter(resource => resource.category === category.id);
 
@@ -44,17 +59,82 @@ Promise.all([
         item.className = 'resource';
         item.id = urlId;
 
+        const isSnippet = resource.category === 'waywall-snippets';
+
+        const viewButton = isSnippet
+          ? `<a href="#" class="view-snippet-btn" data-link="${resource.link}">View</a>`
+          : `<a href="${resource.link}" target="_blank" rel="noopener">View</a>`;
+
+        const copyButton = isSnippet
+          ? `<a href="#" class="copy-snippet-btn" style="display:none;">Copy</a>`
+          : '';
+
         item.innerHTML = `
           <div class="resource-title-row">
               <div class="resource-name"><a href="#${urlId}" class="hash-link">#</a><span class="resource-name-text">${resource.name}</span></div>
               <div class="resource-author">by ${resource.author}</div>
           </div>
-          <div class="resource-description">${resource.description}</div>
+          <div class="resource-description">${renderDescription(resource.description)}</div>
           <div class="resource-buttons">
-              <a href="${resource.link}" target="_blank" rel="noopener">View</a>
+              ${viewButton}
               ${resource.source ? `<a href="${resource.source}" target="_blank" rel="noopener">Source</a>` : ''}
+              ${copyButton}
           </div>
+          ${isSnippet ? `<div class="snippet-code-container" style="display:none;"></div>` : ''}
         `;
+
+        if (isSnippet) {
+          const viewBtn = item.querySelector('.view-snippet-btn');
+          const copyBtn = item.querySelector('.copy-snippet-btn');
+          const codeContainer = item.querySelector('.snippet-code-container');
+          let loaded = false;
+          let code = '';
+          let copyResetTimeout = null;
+
+          viewBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const isVisible = codeContainer.style.display !== 'none';
+
+            if (isVisible) {
+              codeContainer.style.display = 'none';
+              copyBtn.style.display = 'none';
+              viewBtn.textContent = 'View';
+              return;
+            }
+
+            codeContainer.style.display = 'block';
+            copyBtn.style.display = 'inline-block';
+            viewBtn.textContent = 'Hide';
+
+            if (loaded) return;
+            loaded = true;
+
+            fetch(resource.link, { cache: 'no-store' })
+              .then(response => response.text())
+              .then(text => {
+                code = text;
+                codeContainer.innerHTML = `<pre class="snippet-code"><code class="language-lua"></code></pre>`;
+                const codeEl = codeContainer.querySelector('code');
+                codeEl.textContent = code;
+                Prism.highlightElement(codeEl);
+              })
+          });
+
+          copyBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!code) return;
+
+            navigator.clipboard.writeText(code).then(() => {
+              if (copyResetTimeout) clearTimeout(copyResetTimeout);
+              copyBtn.textContent = 'Copied!';
+              copyResetTimeout = setTimeout(() => {
+                copyBtn.textContent = 'Copy';
+                copyResetTimeout = null;
+              }, 1500);
+            });
+          });
+        }
 
         list.appendChild(item);
       });

@@ -120,6 +120,15 @@ h1 {
   margin-top: 3px;
 }
 
+.resource-description a {
+  color: #7ec8ff;
+  text-decoration: none;
+}
+
+.resource-description a:hover {
+  text-decoration: underline;
+}
+
 .resource-buttons {
   margin-top: 8px;
 }
@@ -139,3 +148,22 @@ h1 {
 .resource-buttons a:hover {
   border-color: #446e9e;
 }
+
+.snippet-code-container {
+  margin-top: 12px;
+}
+
+.snippet-code {
+  border: 1px solid #808080;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 550px;
+  margin: 0 !important;
+  text-align: left;
+}
+
+.snippet-code code {
+  white-space: pre;
+  font-size: 0.9em;
+}
+

@@ -1,0 +1,8 @@
+{
+  "name": "Glowdar Mirror",
+  "author": "Gore",
+  "link": "resources/data/code-snippets/glowdar-mirror.lua",
+  "source": "",
+  "description": "Glowdar mirror for your waywall config.",
+  "category": "waywall-snippets"
+}

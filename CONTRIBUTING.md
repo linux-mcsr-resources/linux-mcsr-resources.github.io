@@ -24,17 +24,18 @@ It is fine if the resource isn't made by you.
   "category": "<category id>"
 }
 ```
+You can add hyperlinks in the description by using `[text](link)`, same as in markdown.
 
 4. `category` must be one of these below:
     - `docs`
     - `programs`
     - `waywall-configs`
+    - `waywall-snippets` (waywall config code snippets)
     - `waywall-tools`
     - `websites`
     - `wm`
     - `obs`
     - `tutorials`
-    - `distros`
 
    If none of the above categories fit your resource, you're welcome to suggest a new category in your pull request (just don't edit the `categories.json` file).
 

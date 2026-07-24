@@ -12,6 +12,10 @@
     "label": "Waywall Configs"
   },
   {
+    "id": "waywall-snippets",
+    "label": "Waywall Config Snippets"
+  },
+  {
     "id": "waywall-tools",
     "label": "Waywall Tools"
   },
@@ -30,9 +34,5 @@
   {
     "id": "tutorials",
     "label": "Tutorials"
-  },
-  {
-    "id": "distros",
-    "label": "Distributions"
   }
 ]
