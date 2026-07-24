@@ -11,7 +11,7 @@ fetch('resources/index.json', { cache: 'no-store' })
     const list = document.getElementById('resource-list');
 
     resources.forEach(resource => {
-      const urlId = resource.name.trim().replace(/\s+/g, '-');
+      const urlId = resource.name.trim().toLowerCase().replace(/\s+/g, '-');
       const item = document.createElement('div');
       item.className = 'resource';
       item.id = urlId;
