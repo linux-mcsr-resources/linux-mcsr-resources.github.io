@@ -4,7 +4,7 @@
 
 Before adding a resource, there are some rules about which resources are allowed to be added.
 
-The resource should be Linux specific, meaning a resource that is also used on Windows, will not be accepted. Something like [Prism Launcher](https://prismlauncher.org/) or [Ninjabrain Bot](https://github.com/Ninjabrain1/Ninjabrain-Bot) would not be accepted. If a resource is *mostly* used by the Linux MCSR community, then that's fine too.
+The resource should be Linux specific, meaning a resource that is also used on Windows, will not be accepted. Something like [Prism Launcher](https://prismlauncher.org/) or [Ninjabrain Bot](https://github.com/Ninjabrain1/Ninjabrain-Bot) would not be accepted. If a resource is *primarily* used by the Linux MCSR community, then that's fine too.
 
 It is fine if the resource isn't made by you.
 
