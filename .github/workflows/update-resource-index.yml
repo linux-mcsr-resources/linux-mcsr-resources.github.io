@@ -5,6 +5,9 @@ on:
       - 'resources/*.json'
       - '!resources/index.json'
 
+permissions:
+  contents: write
+
 jobs:
   update-index:
     runs-on: ubuntu-latest
