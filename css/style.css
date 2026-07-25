@@ -85,6 +85,7 @@ h1 {
   padding-bottom: 12px;
   border-bottom: 1px solid #808080;
   position: relative;
+  scroll-margin-top: 20px;
 }
 
 .category-heading::before {
