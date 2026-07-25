@@ -35,19 +35,28 @@ Promise.all([
       });
     }
 
+    function getGroupedResources(categoryResources) {
+      const seenAuthors = [];
+      categoryResources.forEach(resource => {
+        if (!seenAuthors.includes(resource.author)) seenAuthors.push(resource.author);
+      });
+      const grouped = [];
+      seenAuthors.forEach(author => {
+        grouped.push(...categoryResources.filter(resource => resource.author === author));
+      });
+      return grouped;
+    }
+
+    function getResourceUrlId(resource) {
+      return resource.name.trim().toLowerCase().replace(/\s+/g, '-');
+    }
+
     categories.forEach(category => {
       const categoryResources = resources.filter(resource => resource.category === category.id);
 
       if (categoryResources.length === 0) return;
 
-      const seenAuthors = [];
-      categoryResources.forEach(resource => {
-        if (!seenAuthors.includes(resource.author)) seenAuthors.push(resource.author);
-      });
-      const groupedResources = [];
-      seenAuthors.forEach(author => {
-        groupedResources.push(...categoryResources.filter(resource => resource.author === author));
-      });
+      const groupedResources = getGroupedResources(categoryResources);
       const heading = document.createElement('h2');
       heading.className = 'category-heading';
       heading.id = category.id;
@@ -55,7 +64,7 @@ Promise.all([
       list.appendChild(heading);
 
       groupedResources.forEach(resource => {
-        const urlId = resource.name.trim().toLowerCase().replace(/\s+/g, '-');
+        const urlId = getResourceUrlId(resource);
         const item = document.createElement('div');
         item.className = 'resource';
         item.id = urlId;
@@ -140,6 +149,42 @@ Promise.all([
         }
 
         list.appendChild(item);
+      });
+    });
+
+    const sidebar = document.getElementById('sidebar');
+    sidebar.innerHTML = '';
+
+    const titleLink = document.createElement('a');
+    titleLink.href = '#';
+    titleLink.className = 'sidebar-title';
+    titleLink.textContent = 'Linux MCSR Resources';
+    titleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      history.replaceState(null, '', location.pathname + location.search);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    sidebar.appendChild(titleLink);
+
+    categories.forEach(category => {
+      const categoryResources = resources.filter(resource => resource.category === category.id);
+      if (categoryResources.length === 0) return;
+
+      const groupedResources = getGroupedResources(categoryResources);
+
+      const categoryLink = document.createElement('a');
+      categoryLink.href = `#${category.id}`;
+      categoryLink.className = 'sidebar-category';
+      categoryLink.textContent = category.label;
+      sidebar.appendChild(categoryLink);
+
+      groupedResources.forEach(resource => {
+        const urlId = getResourceUrlId(resource);
+        const resourceLink = document.createElement('a');
+        resourceLink.href = `#${urlId}`;
+        resourceLink.className = 'sidebar-resource';
+        resourceLink.textContent = resource.name;
+        sidebar.appendChild(resourceLink);
       });
     });
 

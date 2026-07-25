@@ -12,6 +12,30 @@ body {
   background-color: #3c3f41;
   color: #e0e0e0;
   font-family: 'Inter';
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 5px;
+  width: 220px;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 12px 6px;
+  font-size: 0.85em;
+  text-align: left;
+  border-right: 1px solid #808080;
+  scrollbar-width: auto;
+  scrollbar-color: #a0a0a0 transparent;
+}
+
+@media (max-width: 1400px) {
+  #sidebar {
+    display: none;
+  }
+}
+
+#main-content {
   text-align: center;
 }
 
@@ -186,3 +210,45 @@ h1 {
 .snippet-code code {
   white-space: pre;
 }
+
+#sidebar a {
+  color: #d6d6d6;
+  text-decoration: none;
+  display: block;
+  padding: 3px 0;
+}
+
+#sidebar a:hover {
+  color: #7ec8ff;
+  text-decoration: underline;
+}
+
+.sidebar-category {
+  font-weight: bold;
+  margin-top: 12px;
+  color: #e0e0e0;
+}
+
+.sidebar-category:first-child {
+  margin-top: 0;
+}
+
+.sidebar-resource {
+  padding-left: 12px !important;
+  font-size: 0.95em;
+  color: #b0b0b0;
+}
+
+
+
+.sidebar-title {
+  display: block;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.sidebar-title:hover {
+  color: #7ec8ff;
+  text-decoration: underline;
+}
+
