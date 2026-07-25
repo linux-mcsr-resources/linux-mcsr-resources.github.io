@@ -39,4 +39,7 @@ You can add hyperlinks in the description by using `[text](link)`, same as in ma
 
    If none of the above categories fit your resource, you're welcome to suggest a new category in your pull request (just don't edit the `categories.json` file).
 
+   For `waywall-config-snippets`, you need to add a `.lua` file to `resources/data/code-snippets` and set `link` to the full path of that file (e.g. `"link": "resources/data/code-snippets/oneshot-crosshair.lua"`). Leave `source` as an empty string.
+   
+
 When you're done, create a pull request.
