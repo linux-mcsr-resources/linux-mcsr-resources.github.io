@@ -33,7 +33,6 @@ You can add hyperlinks in the description by using `[text](link)`, same as in ma
     - `waywall-config-snippets`
     - `waywall-tools`
     - `websites`
-    - `wm`
     - `obs`
     - `tutorials`
 
