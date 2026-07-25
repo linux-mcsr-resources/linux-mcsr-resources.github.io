@@ -154,6 +154,7 @@ Promise.all([
 
     const sidebar = document.getElementById('sidebar');
     sidebar.innerHTML = '';
+    sidebar.classList.add('loaded');
 
     const titleLink = document.createElement('a');
     titleLink.href = '#';

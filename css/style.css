@@ -24,9 +24,12 @@ body {
   padding: 12px 6px;
   font-size: 0.85em;
   text-align: left;
-  border-right: 1px solid #808080;
   scrollbar-width: auto;
   scrollbar-color: #a0a0a0 transparent;
+}
+
+#sidebar.loaded {
+  border-right: 1px solid #808080;
 }
 
 @media (max-width: 1400px) {
