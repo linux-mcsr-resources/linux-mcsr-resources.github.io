@@ -111,6 +111,8 @@ Promise.all([
             if (loaded) return;
             loaded = true;
 
+            codeContainer.innerHTML = `<p>Loading...</p>`;
+
             fetch(resource.link, { cache: 'no-store' })
               .then(response => response.text())
               .then(text => {

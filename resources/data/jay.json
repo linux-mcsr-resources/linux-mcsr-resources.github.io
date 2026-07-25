@@ -1,8 +1,0 @@
-{
-  "name": "jay",
-  "author": "mahkoh",
-  "link": "https://github.com/mahkoh/jay",
-  "source": "https://github.com/mahkoh/jay",
-  "description": "Jay is a Wayland compositor for Linux with an i3-like tiling layout, Vulkan and OpenGL rendering, multi-GPU support, screen sharing, and more.",
-  "category": "wm"
-}

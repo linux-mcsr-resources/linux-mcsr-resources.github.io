@@ -28,10 +28,6 @@
     "label": "Websites"
   },
   {
-    "id": "wm",
-    "label": "Window Managers"
-  },
-  {
     "id": "obs",
     "label": "For OBS Studio"
   },
