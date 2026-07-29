@@ -11,7 +11,7 @@ It is fine if the resource isn't made by you.
 ## Adding a resource
 
 1. Create a new `.json` file inside `resources/data/`.
-2. Name the file after your resource (use dashes instead of spaces).
+2. Name the file after your resource in lowercase (use dashes instead of spaces).
 3. Use this format in the file:
 
 ```json
