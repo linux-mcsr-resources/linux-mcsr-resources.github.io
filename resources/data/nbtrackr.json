@@ -3,6 +3,6 @@
   "author": "qMaxXen",
   "link": "https://github.com/qMaxXen/NBTrackr",
   "source": "https://github.com/qMaxXen/NBTrackr",
-  "description": "A program that displays Ninjabrain Bot's info using a pinned image overlay, with either the default overlay with a replica of Ninjabrain Bot's window, or the custom overlay with more customization options. On Wayland, this can be used to have Ninjabrain Bot on your second monitor.",
+  "description": "A program that displays Ninjabrain Bot's info in an always-on-top window, with either the default overlay with a replica of Ninjabrain Bot's window, or the custom overlay with more customization options. On Wayland, this can be used to have Ninjabrain Bot on your second monitor.",
   "category": "programs"
 }
