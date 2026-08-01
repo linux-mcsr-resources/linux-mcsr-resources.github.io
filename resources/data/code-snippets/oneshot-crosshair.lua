@@ -4,9 +4,11 @@ local crosshair_image = nil
 local crosshair_active = nil
 
 local cfg = {
+    -- Change your resolution here to your playing resolution
     resx = 2560,
+    --- Change your resolution here to your playing resolution
     resy = 1440,
-    size = 20,
+    size = 100,
     key = "Shift-I",
     path = os.getenv("HOME") .. "/.config/waywall/resources/crosshair.png",
 }
