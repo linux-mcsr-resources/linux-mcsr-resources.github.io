@@ -10,7 +10,7 @@ local cfg = {
 
     size = 100,
     key = "Shift-I",
-    path = os.getenv("HOME") .. "/.config/waywall/resources/crosshair.png",
+    path = os.getenv("HOME") .. "/.config/waywall/resources/oneshot crosshair.png",
 }
 config.actions[cfg.key] = function()
     if crosshair_image then
