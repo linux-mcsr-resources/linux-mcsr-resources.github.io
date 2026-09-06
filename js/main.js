@@ -192,5 +192,8 @@ Promise.all([
     if (location.hash) {
       const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
       if (target) target.scrollIntoView({ behavior: 'smooth' });
+      const savedHash = location.hash
+      history.replaceState(null, '', location.pathname + location.search);
+      location.hash = savedHash
     }
   });

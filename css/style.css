@@ -97,6 +97,7 @@ h1 {
   height: 100%;
 }
 
+.category-heading:target .hash-link,
 .category-heading:hover .hash-link,
 .category-heading .hash-link:hover {
   opacity: 1;
@@ -155,6 +156,10 @@ h1 {
 }
 
 .resource-name:hover .hash-link {
+  opacity: 1;
+}
+
+.resource:target .hash-link {
   opacity: 1;
 }
 
