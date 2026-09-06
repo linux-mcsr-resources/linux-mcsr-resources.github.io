@@ -162,6 +162,7 @@ Promise.all([
     titleLink.textContent = 'Linux MCSR Resources';
     titleLink.addEventListener('click', (e) => {
       e.preventDefault();
+      location.hash = '#';
       history.replaceState(null, '', location.pathname + location.search);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
