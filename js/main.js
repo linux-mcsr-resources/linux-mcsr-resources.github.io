@@ -197,4 +197,9 @@ Promise.all([
       history.replaceState(null, '', location.pathname + location.search);
       location.hash = savedHash
     }
+  })
+  .catch(err => {
+    console.error(err);
+    const list = document.getElementById('resource-list');
+    list.textContent = 'Could not load resources, this is not good';
   });
