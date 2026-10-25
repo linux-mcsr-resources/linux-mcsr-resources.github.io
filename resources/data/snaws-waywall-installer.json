@@ -1,0 +1,8 @@
+{
+  "name": "snaws waywall installer",
+  "author": "snaw",
+  "link": "https://github.com/lemonsnaw/snaws-waywall-installer",
+  "source": "https://github.com/lemonsnaw/snaws-waywall-installer",
+  "description": "Script that automates waywall installtion and instance setup, generic config , plug waywall setup and much more",
+  "category": "waywall-tools"
+}
