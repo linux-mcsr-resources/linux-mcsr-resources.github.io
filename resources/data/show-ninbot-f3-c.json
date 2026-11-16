@@ -3,6 +3,6 @@
   "author": "Gore",
   "link": "resources/data/code-snippets/show-ninbot-f3-c.lua",
   "source": "",
-  "description": "Show Ninjabrain Bot on F3 + C.",
+  "description": "Show Ninjabrain Bot on F3 + C. If you're using the [generic config](https://github.com/arjuncgore/waywall_generic_config) by Gore, add it to your ~/.config/waywall/extras.lua file.",
   "category": "waywall-config-snippets"
 }

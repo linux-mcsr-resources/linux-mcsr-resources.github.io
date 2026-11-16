@@ -3,6 +3,6 @@
   "author": "snaw",
   "link": "https://github.com/lemonsnaw/snaws-waywall-installer",
   "source": "https://github.com/lemonsnaw/snaws-waywall-installer",
-  "description": "Script that automates waywall installtion and instance setup, generic config , plug waywall setup and much more",
+  "description": "Script that automates waywall installation, Minecraft instance setup, generic config, plug.waywall and much more.",
   "category": "waywall-tools"
 }
